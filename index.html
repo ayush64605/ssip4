@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Page</title>
+</head>
+<body>
+    <h1>Displaying User Input</h1>
+    <ul>
+        <li><strong>Name:</strong> <span id="name"></span></li>
+        <li><strong>District:</strong> <span id="district"></span></li>
+        <li><strong>City:</strong> <span id="city"></span></li>
+        <li><strong>State:</strong> <span id="state"></span></li>
+    </ul>
+
+    <a href="https://ayush64605.github.io/ssip3/">Go back to the form</a>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const name = urlParams.get("name");
+        const district = urlParams.get("district");
+        const city = urlParams.get("city");
+        const state = urlParams.get("state");
+
+        document.getElementById("name").textContent = name;
+        document.getElementById("district").textContent = district;
+        document.getElementById("city").textContent = city;
+        document.getElementById("state").textContent = state;
+    </script>
+</body>
+</html>
